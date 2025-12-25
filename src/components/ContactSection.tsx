@@ -99,14 +99,6 @@ export const ContactSection = () => {
     } finally {
       setIsSubmitting(false);
     }
-
-    setTimeout(() => {
-      toast({
-        title: m.contact.toast.title,
-        description: m.contact.toast.description,
-      });
-      setIsSubmitting(false);
-    }, 1500);
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
