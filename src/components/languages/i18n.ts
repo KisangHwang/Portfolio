@@ -244,35 +244,35 @@ export const messages = {
       },
       items: [
         // Mobile
-        { name: "React Native", level: 95, category: "mobile" },
-        { name: "TypeScript", level: 92, category: "mobile" },
+        { name: "React Native", level: 80, category: "mobile" },
+        { name: "TypeScript", level: 75, category: "mobile" },
         { name: "React Navigation", level: 90, category: "mobile" },
-        { name: "Deep Linking", level: 85, category: "mobile" },
+        { name: "Deep Linking", level: 70, category: "mobile" },
         {
           name: "Push Notifications (FCM/APNS)",
-          level: 88,
+          level: 80,
           category: "mobile",
         },
         {
           name: "Mobile Performance / Optimization",
-          level: 82,
+          level: 65,
           category: "mobile",
         },
 
         // Frontend
-        { name: "React", level: 85, category: "frontend" },
+        { name: "React", level: 70, category: "frontend" },
         { name: "JavaScript (ES6+)", level: 90, category: "frontend" },
-        { name: "Tailwind CSS", level: 75, category: "frontend" },
+        { name: "Tailwind CSS", level: 50, category: "frontend" },
 
         // Backend / API
-        { name: "REST APIs", level: 88, category: "backend" },
-        { name: "GraphQL", level: 82, category: "backend" },
+        { name: "REST APIs", level: 50, category: "backend" },
+        { name: "GraphQL", level: 60, category: "backend" },
         { name: "Node.js", level: 70, category: "backend" },
 
         // Cloud
-        { name: "AWS Amplify (Gen1/Gen2)", level: 88, category: "cloud" },
-        { name: "Amazon Cognito", level: 85, category: "cloud" },
-        { name: "AWS Lambda", level: 80, category: "cloud" },
+        { name: "AWS Amplify (Gen1/Gen2)", level: 77, category: "cloud" },
+        { name: "Amazon Cognito", level: 50, category: "cloud" },
+        { name: "AWS Lambda", level: 50, category: "cloud" },
         {
           name: "Firebase (Auth/Firestore/Storage)",
           level: 78,
@@ -281,9 +281,9 @@ export const messages = {
 
         // Commerce / Tools
         { name: "WooCommerce REST/Store API", level: 85, category: "tools" },
-        { name: "Stripe PaymentSheet", level: 82, category: "tools" },
-        { name: "Git/GitHub", level: 90, category: "tools" },
-        { name: "Xcode / Android Studio", level: 75, category: "tools" },
+        { name: "Stripe PaymentSheet", level: 55, category: "tools" },
+        { name: "Git/GitHub", level: 75, category: "tools" },
+        { name: "Xcode / Android Studio", level: 66, category: "tools" },
       ],
     },
 
@@ -626,27 +626,27 @@ export const messages = {
       },
       items: [
         // Mobile
-        { name: "React Native", level: 95, category: "mobile" },
-        { name: "TypeScript", level: 92, category: "mobile" },
+        { name: "React Native", level: 80, category: "mobile" },
+        { name: "TypeScript", level: 75, category: "mobile" },
         { name: "React Navigation", level: 90, category: "mobile" },
-        { name: "딥링크(Deep Linking)", level: 85, category: "mobile" },
-        { name: "푸시 알림(FCM/APNS)", level: 88, category: "mobile" },
-        { name: "모바일 성능 최적화", level: 82, category: "mobile" },
+        { name: "딥링크(Deep Linking)", level: 70, category: "mobile" },
+        { name: "푸시 알림(FCM/APNS)", level: 80, category: "mobile" },
+        { name: "모바일 성능 최적화", level: 65, category: "mobile" },
 
         // Frontend
-        { name: "React", level: 85, category: "frontend" },
+        { name: "React", level: 70, category: "frontend" },
         { name: "JavaScript (ES6+)", level: 90, category: "frontend" },
-        { name: "Tailwind CSS", level: 75, category: "frontend" },
+        { name: "Tailwind CSS", level: 50, category: "frontend" },
 
         // Backend
-        { name: "REST API", level: 88, category: "backend" },
-        { name: "GraphQL", level: 82, category: "backend" },
+        { name: "REST API", level: 50, category: "backend" },
+        { name: "GraphQL", level: 60, category: "backend" },
         { name: "Node.js", level: 70, category: "backend" },
 
         // Cloud
-        { name: "AWS Amplify (Gen1/Gen2)", level: 88, category: "cloud" },
-        { name: "Amazon Cognito", level: 85, category: "cloud" },
-        { name: "AWS Lambda", level: 80, category: "cloud" },
+        { name: "AWS Amplify (Gen1/Gen2)", level: 77, category: "cloud" },
+        { name: "Amazon Cognito", level: 50, category: "cloud" },
+        { name: "AWS Lambda", level: 50, category: "cloud" },
         {
           name: "Firebase(Auth/Firestore/Storage)",
           level: 78,
@@ -655,9 +655,9 @@ export const messages = {
 
         // Commerce / Tool
         { name: "WooCommerce REST/Store API", level: 85, category: "tools" },
-        { name: "Stripe PaymentSheet", level: 82, category: "tools" },
-        { name: "Git/GitHub", level: 90, category: "tools" },
-        { name: "Xcode / Android Studio", level: 75, category: "tools" },
+        { name: "Stripe PaymentSheet", level: 55, category: "tools" },
+        { name: "Git/GitHub", level: 75, category: "tools" },
+        { name: "Xcode / Android Studio", level: 66, category: "tools" },
       ],
     },
 

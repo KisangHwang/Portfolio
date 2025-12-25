@@ -25,7 +25,7 @@ const generateStars = (): StarType[] => {
     (window.innerWidth * window.innerHeight) / 10000
   );
 
-  return Array.from({ length: numberOfStars }, (element, index) => ({
+  return Array.from({ length: numberOfStars }, (_, index) => ({
     id: index,
     size: `${Math.random() * 3 + 1}px`,
     x: `${Math.random() * 100}%`,
