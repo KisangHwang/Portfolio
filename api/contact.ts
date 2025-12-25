@@ -48,13 +48,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         Body: {
           Text: {
             Data: `
-You have a new message from your portfolio site.
+                You have a new message from your portfolio site.
 
-Name: ${name}
-Email: ${email}
+                Name: ${name}
+                Email: ${email}
 
-Message:
-${message}
+                Message:
+                ${message}
             `.trim(),
             Charset: "UTF-8",
           },
