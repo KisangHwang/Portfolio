@@ -146,6 +146,10 @@ export type Messages = {
       title: string;
       description: string;
     };
+    failed: {
+      title: string;
+      description: string;
+    };
     items: Array<ContactInfoType>;
   };
 
@@ -501,6 +505,11 @@ export const messages = {
       toast: {
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
+      },
+
+      failed: {
+        title: "Oops!",
+        description: "Failed to send a message. Please try later.",
       },
 
       items: [
@@ -867,6 +876,11 @@ export const messages = {
       toast: {
         title: "전송 완료!",
         description: "메시지 감사합니다. 확인 후 빠르게 답변드릴게요.",
+      },
+
+      failed: {
+        title: "Oops!",
+        description: "메시지 전송에 실패했어요. 나중에 다시 시도해 주세요.",
       },
 
       items: [
