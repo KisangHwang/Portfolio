@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
 
 import profileImgCropped from "@/assets/profileImageCropped.png";
 import { useI18n } from "./languages/hook/useI18n";
@@ -11,7 +12,7 @@ export const Navbar = (): React.JSX.Element => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const { m, toggle } = useI18n();
+  const { m } = useI18n();
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -67,15 +68,7 @@ export const Navbar = (): React.JSX.Element => {
 
           <ThemeToggle />
 
-          <button
-            className={cn(
-              "top-5 right-5 z-50 rounded-full border p-1 transition-colors duration-300",
-              "focus:outlin-hidden"
-            )}
-            onClick={toggle}
-          >
-            {m.nav.toggleLabel}
-          </button>
+          <LanguageToggle />
         </div>
 
         {/* Mobile nav */}

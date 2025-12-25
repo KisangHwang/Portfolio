@@ -80,15 +80,6 @@ export type SkillItemType = {
 };
 
 export type Messages = {
-  meta: {
-    name: string;
-    headline: string;
-    location?: string;
-    linkedinUrl: string;
-    githubUrl: string;
-    resumeUrl?: string;
-  };
-
   nav: {
     items: NavItem[];
     toggleLabel: string;
@@ -165,15 +156,6 @@ export type Messages = {
 
 export const messages = {
   en: {
-    meta: {
-      name: "Kisang Hwang",
-      headline: "React Native Mobile Engineer · Full Stack (TS / AWS)",
-      location: "Bay Area, CA",
-      linkedinUrl: "https://www.linkedin.com/in/YOUR_ID",
-      githubUrl: "https://github.com/YOUR_ID",
-      resumeUrl: "/KisangHwang_Resume.pdf",
-    },
-
     nav: {
       toggleLabel: "KO",
       items: [
@@ -193,7 +175,7 @@ export const messages = {
       lastName: "Hwang",
       tagline:
         "React Native engineer who has built and shipped multiple iOS & Android apps-covering commerce (WooCommerce + Stripe), AWS Amplify (Gen1/Gen2), auth, notifications, Mapbox features, plus backend-driven school projects like TicketPro and a phishing detector Chrome extension.",
-      jobTitle: "React Native Engineer · Full Stack (TS / AWS)",
+      jobTitle: "React Native Mobile Engineer · Software Engineer (TS / AWS)",
       ctaPrimary: "View My Work",
       scroll: "Scroll",
     },
@@ -547,15 +529,6 @@ export const messages = {
   },
 
   ko: {
-    meta: {
-      name: "Kisang Hwang",
-      headline: "React Native 모바일 엔지니어 · 풀스택 (TS / AWS)",
-      location: "미국 Bay Area, CA",
-      linkedinUrl: "https://www.linkedin.com/in/YOUR_ID",
-      githubUrl: "https://github.com/YOUR_ID",
-      resumeUrl: "/KisangHwang_Resume.pdf",
-    },
-
     nav: {
       toggleLabel: "EN",
       items: [
@@ -575,7 +548,7 @@ export const messages = {
       lastName: "입니다.",
       tagline:
         "iOS/Android 프로덕션 앱을 직접 설계·개발·출시해본 React Native 엔지니어입니다. WooCommerce + Stripe 커머스, AWS Amplify(Gen1/Gen2), 인증/푸시/Mapbox 기능과 함께 TicketPro, 피싱 탐지 크롬 익스텐션 같은 학교 프로젝트도 경험했습니다.",
-      jobTitle: "React Native 엔지니어 · 풀스택 (TS / AWS)",
+      jobTitle: "React Native 모바일 엔지니어 · Software Engineer (TS / AWS)",
       ctaPrimary: "프로젝트 보기",
       scroll: "스크롤",
     },
