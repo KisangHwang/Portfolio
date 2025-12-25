@@ -4,7 +4,9 @@ import { cn } from "@/lib/utils";
 
 const getInitialIsDark = (): boolean => {
   if (typeof window === "undefined") return false;
-  return localStorage.getItem("theme") === "dark";
+  const isDark = localStorage.getItem("theme");
+
+  return isDark === "dark" || isDark === null;
 };
 
 export const ThemeToggle = (): React.JSX.Element => {
