@@ -84,4 +84,4 @@ Uses:
 
 ## 📎 License
 
-Portfolio use only — feel free to reference structure, but please don’t copy 1:1.
+Portfolio use only — feel free to reference.
