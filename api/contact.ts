@@ -10,7 +10,7 @@ const sesClient = new SESClient({
   },
 });
 
-export const handler = async (req: VercelRequest, res: VercelResponse) => {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -78,4 +78,4 @@ ${message}
     console.error("SES send error:", error);
     return res.status(500).json({ error: "Failed to send email" });
   }
-};
+}
