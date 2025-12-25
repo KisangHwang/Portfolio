@@ -3,7 +3,7 @@
 This is my personal developer portfolio site built with **React + TypeScript + Vite**.  
 It showcases my experience as a **React Native Mobile Engineer / Software Engineer**, including production mobile apps and school projects.
 
-🔗 **Live Site:** https://portfolio-omega-cyan-60.vercel.app/
+🔗 **Live Site:** https://portfolio-omega-cyan-60.vercel.app/  
 🔗 **LinkedIn:** https://www.linkedin.com/in/kisang-hwang-068745219  
 🔗 **GitHub:** https://github.com/KisangHwang
 
