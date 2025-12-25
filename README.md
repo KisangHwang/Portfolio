@@ -1,75 +1,87 @@
-# React + TypeScript + Vite
+# Kisang Hwang – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio site built with **React + TypeScript + Vite**.  
+It showcases my experience as a **React Native Mobile Engineer / Software Engineer**, including production mobile apps and school projects.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** https://YOUR-PROD-DOMAIN.vercel.app  
+🔗 **LinkedIn:** https://www.linkedin.com/in/kisang-hwang-068745219  
+🔗 **GitHub:** https://github.com/KisangHwang
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧩 Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Frontend**
 
-Note: This will impact Vite dev & build performances.
+  - React 18 + TypeScript
+  - Vite
+  - Tailwind CSS (with custom theme utilities)
+  - shadcn/ui components
+  - lucide-react icons
 
-## Expanding the ESLint configuration
+- **Features**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+  - Bilingual content: **English / Korean** (simple i18n with context + hooks)
+  - Dark / Light theme toggle
+  - Smooth section navigation (Home, About, Skills, Projects, Contact)
+  - Animated UI (custom CSS keyframes + Tailwind utilities)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Backend / Infra**
+  - Deployed on **Vercel**
+  - Contact form integrated with **AWS SES** (serverless function) to send emails
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🌐 Sections
+
+- **Hero** – Intro, headline, quick CTA
+- **About** – Short bio + what I’m currently looking for
+- **Skills** – Categorized skill listing with proficiency levels
+- **Projects** – Production & school projects including:
+  - Two Daisies
+  - U (Campus Utility App)
+  - ONPOST
+  - Crew
+  - Phishing Detector (LLM Chrome Extension)
+  - TicketPro (DB-focused school platform)
+- **Contact** – Contact info + AWS SES powered email form
+
+---
+
+## 🛠 Local Development
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🗣 i18n (EN / KO)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Language is handled via React Context + custom hook, and persisted using `localStorage` so refresh keeps your language preference.
+
+---
+
+## 📩 Contact Form
+
+Uses:
+
+- `/api/contact` Vercel Serverless Function
+- AWS SES
+- Environment variables (`.env` + Vercel Dashboard)
+
+---
+
+## 🚀 Deployment
+
+- Hosted on **Vercel**
+- CI/CD via GitHub → Vercel auto deployment
+
+---
+
+## 📎 License
+
+Portfolio use only — feel free to reference structure, but please don’t copy 1:1.
