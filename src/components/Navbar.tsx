@@ -4,23 +4,14 @@ import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 import profileImgCropped from "@/assets/profileImageCropped.png";
-
-type navType = {
-  name: string;
-  href: string;
-};
-
-const navItems: navType[] = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { useI18n } from "./languages/hook/useI18n";
+import type { NavItem } from "./languages/i18n";
 
 export const Navbar = (): React.JSX.Element => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const { m, toggle } = useI18n();
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -47,14 +38,14 @@ export const Navbar = (): React.JSX.Element => {
             className="h-12 w-12 rounded-full object-contain ring-1 ring-border"
           />
           <span className="text-xl font-bold text-primary relative z-10 max-sm:hidden">
-            <span className="text-glow text-foreground"> Kisang Hwang </span>{" "}
-            Portfolio
+            <span className="text-glow text-foreground"> {m.nav.name} </span>{" "}
+            {m.nav.topic}
           </span>
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item: navType, key: number) => (
+        <div className="hidden md:flex space-x-8 ml-5 mr-5">
+          {m.nav.items.map((item: NavItem, key: number) => (
             <a
               key={key}
               href={item.href}
@@ -75,6 +66,16 @@ export const Navbar = (): React.JSX.Element => {
           </button>
 
           <ThemeToggle />
+
+          <button
+            className={cn(
+              "top-5 right-5 z-50 rounded-full border p-1 transition-colors duration-300",
+              "focus:outlin-hidden"
+            )}
+            onClick={toggle}
+          >
+            {m.nav.toggleLabel}
+          </button>
         </div>
 
         {/* Mobile nav */}
@@ -88,7 +89,7 @@ export const Navbar = (): React.JSX.Element => {
           )}
         >
           <div className="flex flex-col space-y-8 text-xl">
-            {navItems.map((item: navType, key: number) => (
+            {m.nav.items.map((item: NavItem, key: number) => (
               <a
                 key={key}
                 href={item.href}

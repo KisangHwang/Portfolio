@@ -8,27 +8,30 @@ import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectsSection } from "@/components/ProjectSection";
 import { Footer } from "@/components/Footer";
 import { ContactSection } from "@/components/ContactSection";
+import { LanguageProvider } from "@/components/languages/LanguageProvider";
 
 export const Home = (): React.JSX.Element => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <StarBackground />
+    <LanguageProvider>
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <StarBackground />
 
-      <Navbar />
+        <Navbar />
 
-      <main>
-        <HeroSection />
+        <main>
+          <HeroSection />
 
-        <AboutSection />
+          <AboutSection />
 
-        <SkillsSection />
+          <SkillsSection />
 
-        <ProjectsSection />
+          <ProjectsSection />
 
-        <ContactSection />
-      </main>
+          <ContactSection />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };

@@ -1,52 +1,31 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useI18n } from "./languages/hook/useI18n";
+import type { SkillCategory, SkillItemType } from "./languages/i18n";
 
-type SkillType = {
-  name: string;
-  level: number;
-  category: string;
-};
-
-const skills: SkillType[] = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
-
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
-
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-];
-
-const categories: string[] = ["all", "frontend", "backend", "tools"];
 const duration = 1200;
 
 export const SkillsSection = (): React.JSX.Element => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [hasAnimated, setHasAnimated] = useState<boolean>(false);
 
-  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const { m } = useI18n();
+
+  const categoryKeys = Object.keys(m.skills.categories) as Array<
+    keyof typeof m.skills.categories
+  >;
+  type CategoryKey = (typeof categoryKeys)[number];
+
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>("all");
 
   const [counts, setCounts] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
-    for (const s of skills) init[s.name] = 0;
+    for (const s of m.skills.items) init[s.name] = 0;
     return init;
   });
 
-  const filteredSkills: SkillType[] = skills.filter(
-    (skill: SkillType) =>
+  const filteredSkills: SkillItemType[] = m.skills.items.filter(
+    (skill: SkillItemType) =>
       activeCategory === "all" || skill.category === activeCategory
   );
 
@@ -82,7 +61,7 @@ export const SkillsSection = (): React.JSX.Element => {
 
       setCounts(() => {
         const next: Record<string, number> = {};
-        for (const s of skills) {
+        for (const s of m.skills.items) {
           next[s.name] = Math.round(s.level * t);
         }
 
@@ -95,7 +74,7 @@ export const SkillsSection = (): React.JSX.Element => {
     const rafId = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(rafId);
-  }, [hasAnimated]);
+  }, [hasAnimated, m.skills.items]);
 
   return (
     <section
@@ -105,11 +84,12 @@ export const SkillsSection = (): React.JSX.Element => {
     >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-primary"> Skills</span>
+          {m.skills.title}{" "}
+          <span className="text-primary"> {m.skills.subtitle}</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category: string, key: number) => (
+          {categoryKeys.map((category: SkillCategory, key: number) => (
             <button
               key={key}
               onClick={() => setActiveCategory(category)}
@@ -120,13 +100,13 @@ export const SkillsSection = (): React.JSX.Element => {
                   : "bg-secondary/70 text-forefround hover:bd-secondary"
               )}
             >
-              {category}
+              {m.skills.categories[category]}
             </button>
           ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredSkills.map((skill: SkillType, key: number) => (
+          {filteredSkills.map((skill: SkillItemType, key: number) => (
             <div
               key={key}
               className="bg-card p-6 rounded-lg shadow-xs card-hover"
@@ -136,13 +116,11 @@ export const SkillsSection = (): React.JSX.Element => {
               </div>
               <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
                 <div
-                  className={cn(
-                    "bg-primary h-2 rounded-full",
-                    `transition-[width] duration-${duration} ease-out`,
-                    "will-change-[width]"
-                  )}
-                  //    origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: hasAnimated ? `${skill.level}%` : "0%" }}
+                  className="bg-primary h-2 rounded-full transition-[width] ease-out will-change-[width]"
+                  style={{
+                    width: hasAnimated ? `${skill.level}%` : "0%",
+                    transitionDuration: `${duration}ms`,
+                  }}
                 />
               </div>
 

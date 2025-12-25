@@ -3,8 +3,11 @@ import { ArrowDown, Github, Linkedin } from "lucide-react";
 
 import profileImg from "@/assets/profileImageFull.jpg";
 import { cn } from "@/lib/utils";
+import { useI18n } from "./languages/hook/useI18n";
 
 export const HeroSection = (): React.JSX.Element => {
+  const { m } = useI18n();
+
   return (
     <section
       id="hero"
@@ -15,26 +18,24 @@ export const HeroSection = (): React.JSX.Element => {
         <div className="w-full lg:w-2/3 text-center lg:text-left">
           <div className="space-y-6 mx-auto lg:mx-0">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              <span className="opacity-0 animate-fade-in">Hi, I'm</span>
+              <span className="opacity-0 animate-fade-in">{m.hero.hi}</span>
               <span className="text-primary opacity-0 animate-fade-in-delay-1">
                 {" "}
-                Pedro
+                {m.hero.firstName}
               </span>
               <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
                 {" "}
-                Machado
+                {m.hero.lastName}
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground opacity-0 animate-fade-in-delay-3">
-              I create stellar web experiences with modern technologies.
-              Specializing in front-end development, I build interfaces that are
-              both beautiful and functional.
+              {m.hero.tagline}
             </p>
 
-            <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+            <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex gap-4 justify-center">
               <a href="#projects" className="cosmic-button inline-flex">
-                View My Work
+                {m.hero.ctaPrimary}
               </a>
             </div>
           </div>
@@ -57,12 +58,12 @@ export const HeroSection = (): React.JSX.Element => {
                 />
 
                 <div className="mt-1 text-md text-foreground/70">
-                  React Native Engineer — Full Stack (TS / AWS)
+                  {m.hero.jobTitle}
                 </div>
 
                 <div className="flex gap-2">
                   <a
-                    href="https://www.linkedin.com/in/YOUR_ID"
+                    href="https://www.linkedin.com/in/kisang-hwang-068745219"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Kinsag Hwang LinkedIn"
@@ -76,7 +77,7 @@ export const HeroSection = (): React.JSX.Element => {
                   </a>
 
                   <a
-                    href="https://github.com/YOUR_ID"
+                    href="https://github.com/KisangHwang"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Kinsag Hwang GitHub"
@@ -96,7 +97,10 @@ export const HeroSection = (): React.JSX.Element => {
       </div>
 
       <div className="mt-30 transform flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
+        <span className="text-sm text-muted-foreground mb-2">
+          {" "}
+          {m.hero.scroll}{" "}
+        </span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
     </section>
