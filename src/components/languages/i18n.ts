@@ -187,7 +187,8 @@ export const messages = {
     about: {
       title: "About ",
       subtitle: "Me",
-      shortDesc: "React Native Engineer shipping real products",
+      shortDesc:
+        "React Native engineer focused on building and refining real mobile products from idea to deployment.",
       paragraphs: [
         "I’m a React Native mobile engineer who has built and shipped multiple apps for iOS & Android. I’ve launched 4 full mobile apps across wellness & supplements, e-commerce, campus utilities, and on-base transportation tools for U.S. soldiers, and also completed school projects like TicketPro (event ticketing platform) and a phishing detector Chrome extension.",
         "Although I was the sole mobile developer on each app, I worked closely with a 3–4 person product team to define features, shape UX flows, and iterate based on real user feedback after launch.",
@@ -565,7 +566,8 @@ export const messages = {
     about: {
       title: "간단 ",
       subtitle: "소개",
-      shortDesc: "실제 사용자들이 쓰는 앱을 출시하는 React Native 엔지니어",
+      shortDesc:
+        "아이디어 단계부터 배포까지 모바일 제품을 설계하고 다듬는 데 집중하는 React Native 엔지니어입니다.",
       paragraphs: [
         "저는 iOS/Android 프로덕션 앱을 개발·출시해온 React Native 모바일 엔지니어로, 웰니스/영양제, 이커머스, 대학생 유틸리티, 미군 부대 교통/시설 앱까지 총 4개의 앱을 런칭했습니다. 또한 TicketPro(이벤트 티켓팅 플랫폼), 피싱 탐지 크롬 익스텐션과 같은 학교 프로젝트도 수행하며 웹/백엔드와 연동되는 서비스 전체 흐름을 경험했습니다.",
         "각 앱에서 모바일 개발은 단독으로 맡았지만, 3–4명의 프로덕트 팀과 함께 기능 기획, UX 흐름 설계, 로드맵 우선순위 정리, 출시 후 사용자 피드백 기반 반복 개선을 꾸준히 진행했습니다.",
