@@ -463,6 +463,7 @@ export const messages = {
           ],
           image: PROJECT_IMAGES.ticketPro,
           tags: [
+            "Next.js",
             "MySQL",
             "Database Design",
             "Web App Architecture",
@@ -834,6 +835,7 @@ export const messages = {
           ],
           image: PROJECT_IMAGES.ticketPro,
           tags: [
+            "Next.js",
             "MySQL",
             "데이터베이스 설계",
             "웹 앱 아키텍처",
