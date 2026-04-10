@@ -2,7 +2,6 @@ import React from "react";
 import { Cloud, CreditCard, Smartphone, type LucideIcon } from "lucide-react";
 import { useI18n } from "./languages/hook/useI18n";
 import type { cardIconName, CardType } from "./languages/i18n";
-import resumePdf from "@/assets/Kisang Hwang Resume-1.pdf";
 
 const CARD_ICON: Record<cardIconName, LucideIcon> = {
   smartphone: Smartphone,
@@ -59,7 +58,7 @@ export const AboutSection = (): React.JSX.Element => {
               </a>
 
               <a
-                href={resumePdf}
+                href={m.about.ctaDownload}
                 download="KisangHwang_Resume.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
