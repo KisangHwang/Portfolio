@@ -4,6 +4,8 @@ import ONPOST from "@/assets/ONPOST.png";
 import CREW from "@/assets/CREW.png";
 import TicketPro from "@/assets/TicketPro.png";
 import PhishDetector from "@/assets/Phishing Detector.png";
+import resumePdfUS from "@/assets/Kisang Hwang Resume US.pdf";
+import resumePdfKR from "@/assets/Kisang Hwang Resume KR.pdf";
 
 export type Lang = "en" | "ko";
 
@@ -104,6 +106,7 @@ export type Messages = {
     paragraphs: string[];
     ctaContact: string;
     ctaResume: string;
+    ctaDownload: string;
     cards: Array<CardType>;
   };
 
@@ -191,11 +194,12 @@ export const messages = {
         "React Native engineer focused on building and refining real mobile products from idea to deployment.",
       paragraphs: [
         "I’m a React Native mobile engineer who has built and shipped multiple apps for iOS & Android. I’ve launched 4 full mobile apps across wellness & supplements, e-commerce, campus utilities, and on-base transportation tools for U.S. soldiers, and also completed school projects like TicketPro (event ticketing platform) and a phishing detector Chrome extension.",
-        "Although I was the sole mobile developer on each app, I worked closely with a 3–4 person product team to define features, shape UX flows, and iterate based on real user feedback after launch.",
+        "Although I was the sole mobile developer on each app, I worked closely with a 3-4 person product team to define features, shape UX flows, and iterate based on real user feedback after launch.",
         "Right now I’m looking for React Native / Mobile / Frontend roles where I can ship quickly with a small team, own features end-to-end, and turn early-stage ideas into polished apps people use daily.",
       ],
       ctaContact: "Get In Touch",
       ctaResume: "Download Resume",
+      ctaDownload: resumePdfUS,
       cards: [
         {
           title: "Mobile Engineering (iOS/Android)",
@@ -286,7 +290,7 @@ export const messages = {
         {
           id: 1,
           title: "Two Daisies - Wellness & Supplement Tracking",
-          period: "Aug 2025 – Oct 2025",
+          period: "Aug 2025 - Oct 2025",
           description:
             "A wellness app for supplement tracking with smart reminders and integrated WooCommerce commerce + Stripe payments.",
           highlights: [
@@ -324,11 +328,11 @@ export const messages = {
         {
           id: 2,
           title: "U - Campus Utility & Collaboration App",
-          period: "Aug 2024 – Mar 2025",
+          period: "Aug 2024 - Mar 2025",
           description:
             "A student platform for college email verification, schedule building, note-taking/sharing, and campus navigation.",
           highlights: [
-            "Built end-to-end in React Native while collaborating with a 3–4 person product team.",
+            "Built end-to-end in React Native while collaborating with a 3-4 person product team.",
             "AWS Amplify Gen1 + Cognito/Lambda + GraphQL for core backend flows.",
             "Firebase + analytics tooling for stability and product insights.",
           ],
@@ -360,7 +364,7 @@ export const messages = {
         {
           id: 3,
           title: "ONPOST - Base Transport & Community App",
-          period: "May 2023 – Nov 2023",
+          period: "May 2023 - Nov 2023",
           description:
             "A transportation & facility guide for Camp Humphreys soldiers with Mapbox maps, routing, POIs, and community features.",
           highlights: [
@@ -398,11 +402,11 @@ export const messages = {
         {
           id: 4,
           title: "Crew - Self-Improvement Challenge App",
-          period: "Aug 2022 – May 2023",
+          period: "Aug 2022 - May 2023",
           description:
             'A behavior-change app where users join paid "Steps," submit proof photos, and earn rewards based on completion.',
           highlights: [
-            "Collaborated with a 3–4 person team to shape challenge mechanics and UX.",
+            "Collaborated with a 3-4 person team to shape challenge mechanics and UX.",
             "Implemented authentication, notifications, and photo-proof flows.",
             "Firebase-based data + storage architecture.",
           ],
@@ -434,7 +438,7 @@ export const messages = {
           title: "Phishing Detector - Chrome Extension (LLM)",
           period: "Mar 2024",
           description:
-            "A Chrome extension that uses an LLM to score phishing suspicion (0–100) from sender/subject/body with short explanations.",
+            "A Chrome extension that uses an LLM to score phishing suspicion (0-100) from sender/subject/body with short explanations.",
           highlights: [
             "Built UI with HTML/CSS and logic with vanilla JavaScript (fetch, async/await).",
             "Designed a quick scoring + explanation UX for email triage.",
@@ -523,7 +527,7 @@ export const messages = {
         {
           label: "Phone",
           type: "phone",
-          data: "+14082050020",
+          data: "+1 -",
         },
         {
           label: "Location",
@@ -571,11 +575,12 @@ export const messages = {
         "아이디어 단계부터 배포까지 모바일 제품을 설계하고 다듬는 데 집중하는 React Native 엔지니어입니다.",
       paragraphs: [
         "저는 iOS/Android 프로덕션 앱을 개발·출시해온 React Native 모바일 엔지니어로, 웰니스/영양제, 이커머스, 대학생 유틸리티, 미군 부대 교통/시설 앱까지 총 4개의 앱을 런칭했습니다. 또한 TicketPro(이벤트 티켓팅 플랫폼), 피싱 탐지 크롬 익스텐션과 같은 학교 프로젝트도 수행하며 웹/백엔드와 연동되는 서비스 전체 흐름을 경험했습니다.",
-        "각 앱에서 모바일 개발은 단독으로 맡았지만, 3–4명의 프로덕트 팀과 함께 기능 기획, UX 흐름 설계, 로드맵 우선순위 정리, 출시 후 사용자 피드백 기반 반복 개선을 꾸준히 진행했습니다.",
+        "각 앱에서 모바일 개발은 단독으로 맡았지만, 3-4명의 프로덕트 팀과 함께 기능 기획, UX 흐름 설계, 로드맵 우선순위 정리, 출시 후 사용자 피드백 기반 반복 개선을 꾸준히 진행했습니다.",
         "현재는 작은 팀에서 빠르게 기능을 출시하고, 제품의 일부를 엔드투엔드로 오너십 있게 성장시킬 수 있는 React Native / Mobile / Frontend 포지션을 찾고 있습니다.",
       ],
       ctaContact: "연락하기",
       ctaResume: "이력서 다운로드",
+      ctaDownload: resumePdfKR,
       cards: [
         {
           title: "모바일 엔지니어링 (iOS/Android)",
@@ -658,7 +663,7 @@ export const messages = {
         {
           id: 1,
           title: "Two Daisies - 웰니스 & 영양제 트래킹",
-          period: "2025.08 – 2025.10",
+          period: "2025.08 - 2025.10",
           description:
             "영양제 트래킹과 스마트 리마인더, WooCommerce 커머스 + Stripe 결제를 통합한 웰니스 앱.",
           highlights: [
@@ -696,11 +701,11 @@ export const messages = {
         {
           id: 2,
           title: "U - 대학생 유틸리티 & 협업 앱",
-          period: "2024.08 – 2025.03",
+          period: "2024.08 - 2025.03",
           description:
             "학교 이메일 인증, 시간표 생성, 노트 작성/공유, 캠퍼스 기능을 제공하는 학생용 플랫폼.",
           highlights: [
-            "React Native로 엔드투엔드 개발 + 3–4명 팀과 기획/UX 플로우 협업.",
+            "React Native로 엔드투엔드 개발 + 3-4명 팀과 기획/UX 플로우 협업.",
             "AWS Amplify Gen1 + Cognito/Lambda + GraphQL로 핵심 백엔드 플로우 구현.",
             "Firebase 및 Analytics 기반으로 안정성과 지표 개선.",
           ],
@@ -732,7 +737,7 @@ export const messages = {
         {
           id: 3,
           title: "ONPOST - 미군 부대 교통 & 커뮤니티 앱",
-          period: "2023.05 – 2023.11",
+          period: "2023.05 - 2023.11",
           description:
             "버스/택시 정보, Mapbox 커스텀 지도, 시설 정보, 커뮤니티 기능을 제공하는 부대 가이드 앱.",
           highlights: [
@@ -770,11 +775,11 @@ export const messages = {
         {
           id: 4,
           title: "Crew - 자기계발 챌린지 앱",
-          period: "2022.08 – 2023.05",
+          period: "2022.08 - 2023.05",
           description:
             "유료 스텝 참여, 인증 사진 제출, 완료 기반 보상 구조의 목표/습관 형성 앱.",
           highlights: [
-            "3–4명 팀과 챌린지 메커니즘/UX를 함께 설계.",
+            "3-4명 팀과 챌린지 메커니즘/UX를 함께 설계.",
             "인증/알림/인증 사진 제출 플로우 구현.",
             "Firebase 기반 데이터/스토리지 아키텍처 구축.",
           ],
@@ -806,7 +811,7 @@ export const messages = {
           title: "피싱 탐지 - 크롬 익스텐션(LLM)",
           period: "2024.03",
           description:
-            "LLM으로 이메일 발신자/제목/본문을 분석해 피싱 의심 점수(0–100)와 짧은 설명을 제공하는 크롬 익스텐션.",
+            "LLM으로 이메일 발신자/제목/본문을 분석해 피싱 의심 점수(0-100)와 짧은 설명을 제공하는 크롬 익스텐션.",
           highlights: [
             "HTML/CSS로 UI 구성, vanilla JS(fetch/async-await)로 로직 구현.",
             "빠르게 판단할 수 있도록 점수 + 설명 UX 설계.",
@@ -896,7 +901,7 @@ export const messages = {
         {
           label: "전화번호",
           type: "phone",
-          data: "+82 -",
+          data: "+82 010-5626-9305",
         },
         {
           label: "지역",
